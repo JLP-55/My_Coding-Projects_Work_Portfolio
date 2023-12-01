@@ -1,6 +1,8 @@
 :root {
+    --colour-text: #fff;
     --colour-dark-blue: #13293d;
     --colour-light-green: rgb(158, 255, 214);
+    --border-focus: #772014;
 }
 
 * {
@@ -8,6 +10,7 @@
     padding: 0px;
 }
 
+/*header section*/
 header {
     position: relative;
     display: flex;
@@ -16,6 +19,43 @@ header {
     line-height: 25px;
 }
 
+/*name and picture code*/
+h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.7rem;
+}
+
+.font-large {
+    margin-top: -0.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+}
+
+img {
+    position: absolute;
+    top: 28px;
+    width: 150px;
+    /*display: flex;
+    flex-wrap: wrap;*/
+}
+
+/*header link code*/
+.header-left {
+    margin: 5px 45px 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-right {
+    margin: -65px 45px 5px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/*main section*/
 main {
     margin-top: 50px;
     /*display: flex;
@@ -29,65 +69,78 @@ article {
     align-items: flex-start;
 }
 
-img {
-    position: absolute;
-    top: 28px;
-    width: 150px;
-    /*display: flex;
-    flex-wrap: wrap;*/
-}
-
-h1 {
+.main-list {
+    height: 105px;
+    width: 250px;
+    margin-left: 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.7rem;
+    flex-direction: column;
+    border: solid #000;
 }
 
-h2 {
-
+/*pseudo classes example*/
+.main-list:hover {
+    background-color: var(--colour-dark-blue);
+    color: var(--colour-text);
 }
 
-.font-large {
-    margin-top: -0.1rem;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
+.main-list:focus {
+    outline: none;
+    border-color: var(--border-focus)
 }
 
-.header-left {
-    margin: 5px 45px 5px;
-    display: flex;
-    flex-direction: row;
+.main-list:active {
+    font-size: 150%;
+    box-shadow: 0 0 100px #000 inset;
 }
+/*pseudo classes example*/
+
+/*pseudo element examples*/
+li::before {
+    font-family: Impact;
+    content: '\273A';
+    color: #772014;
+    margin-right: 5px;
+  }
+  /*pseudo element examples*/
 
 .main-project {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     background-color: var(--colour-light-green);
     margin: 5px 75px 0px;
     height: 150px;
-    width: 1500px;
+    width: 300px;
+    border: solid 
 }
 
-.header-right {
-    margin: -65px 45px 5px;
-    display: flex;
-    flex-direction: row-reverse;
+.main-project:hover {
+    background-color: var(--colour-dark-blue);
+    color: var(--colour-text);
 }
 
-.move-right {
-    margin-right: 100px;
+.sub-right {
+    /*margin-right: 150px;*/
+    padding: 25px 350px 25px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: flex-end;
+    justify-content: space-between;
 }
 
 .sub-project {
     background-color: var(--colour-light-green);
     height: 200px;
     width: 200px;
+    padding: 0px 25px 0px;
+    border: dashed;
+}
+
+.sub-project:hover {
+    background-color: var(--colour-dark-blue);
+    color: var(--colour-text);
 }
 
 footer {
@@ -104,6 +157,13 @@ footer {
     }
 }
 
+@media screen and (max-width: 1320px) {
+    .sub-project {
+        display: flex;
+        align-items: column;
+        justify-content: center;
+    }
+}
 
 /*
 
