@@ -1,5 +1,6 @@
 :root {
     --colour-dark-blue: #13293d;
+    --colour-light-green: rgb(158, 255, 214);
 }
 
 * {
@@ -17,14 +18,23 @@ header {
 
 main {
     margin-top: 50px;
+    /*display: flex;
+    flex-wrap: wrap;*/
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 img {
     position: absolute;
     top: 28px;
     width: 150px;
-    display: flex;
-    flex-wrap: wrap;
+    /*display: flex;
+    flex-wrap: wrap;*/
 }
 
 h1 {
@@ -33,6 +43,10 @@ h1 {
     justify-content: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.7rem;
+}
+
+h2 {
+
 }
 
 .font-large {
@@ -47,6 +61,15 @@ h1 {
     flex-direction: row;
 }
 
+.main-project {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--colour-light-green);
+    margin: 5px 75px 0px;
+    height: 150px;
+    width: 1500px;
+}
+
 .header-right {
     margin: -65px 45px 5px;
     display: flex;
@@ -54,9 +77,17 @@ h1 {
 }
 
 .move-right {
+    margin-right: 100px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: flex-end;
+}
+
+.sub-project {
+    background-color: var(--colour-light-green);
+    height: 200px;
+    width: 200px;
 }
 
 footer {
@@ -65,4 +96,61 @@ footer {
     margin-top: 200px;
 }
 
+@media screen and (max-width: 495px) {
+    .header-left {
+        background-color: red;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
 
+
+/*
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    margin: 0;
+  }
+  
+  header {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  
+  main {
+    display: flex;
+    margin-top: 2%;
+    flex-wrap: wrap;
+  }
+  
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    background: #13293d;
+    color: #fff;
+  }
+  
+  .card {
+    flex: 1 0 0;
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+  }
+  
+  .card header {
+    padding: 20px;
+    background: #13293d;
+    color: #fff;
+  }
+  
+  .card img {
+    width: 100%;
+    min-width: 400px;
+  }
+  */
