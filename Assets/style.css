@@ -3,10 +3,11 @@
     --colour-dark-blue: #13293d;
     --colour-light-green: rgb(158, 255, 214);
     --border-focus: #772014;
+    --header-background: rgb(243, 243, 144);
 }
 
 * {
-    margin: 2px 0px 2px 0px;
+    margin: 0px;
     padding: 0px;
 }
 
@@ -17,6 +18,7 @@ header {
     flex-wrap: wrap;
     flex-direction: column; 
     line-height: 25px;
+    background-color: var(--header-background);
 }
 
 /*name and picture code*/
@@ -58,8 +60,9 @@ img {
 /*main section*/
 main {
     margin-top: 50px;
-    /*display: flex;
-    flex-wrap: wrap;*/
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 article {
@@ -67,6 +70,11 @@ article {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
+}
+
+h2 {
+    border: solid var(--border-focus);
+    border-radius: 8px;
 }
 
 .main-list {
@@ -90,8 +98,8 @@ article {
 }
 
 .main-list:active {
-    font-size: 150%;
-    box-shadow: 0 0 100px #000 inset;
+    font-size: 88%;
+    box-shadow: 0 0 100px var(--border-focus) inset;
 }
 /*pseudo classes example*/
 
@@ -107,12 +115,12 @@ li::before {
 .main-project {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: var(--colour-light-green);
-    margin: 5px 75px 0px;
+   /* margin: 5px 75px 0px; */
     height: 150px;
-    width: 300px;
+    width: 100%;
     border: solid 
 }
 
@@ -122,20 +130,23 @@ li::before {
 }
 
 .sub-right {
-    /*margin-right: 150px;*/
-    padding: 25px 350px 25px;
+    padding: 0px 350px 0px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+   justify-content: center;
 }
 
 .sub-project {
     background-color: var(--colour-light-green);
     height: 200px;
-    width: 200px;
+    width: 280px;
+    margin: 32px 16px 0px;
     padding: 0px 25px 0px;
     border: dashed;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .sub-project:hover {
@@ -157,11 +168,19 @@ footer {
     }
 }
 
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1520px) {
     .sub-project {
         display: flex;
-        align-items: column;
-        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 1636px) {
+    .sub-right {
+        background-color: var(--border-focus);
+        display: flex;
+        flex-direction: row;
     }
 }
 
