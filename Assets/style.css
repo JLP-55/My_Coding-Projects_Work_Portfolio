@@ -22,9 +22,9 @@ body {
 header {
     /*position: relative;*/
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 25px;
     height: 125px;
@@ -36,13 +36,13 @@ header {
 /*name and picture code*/
 h1 {
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     justify-content: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.7rem;
 }
 
-.font-large {
+#font-large {
     margin-top: -0.25rem;
     margin-right: 0.35rem;
     font-family: 'Courier New', Courier, monospace;
@@ -53,9 +53,9 @@ h1 {
 .put-center {
     height: 35px;
     width: 100%;
-    display: flex;
+    /*display: flex;*/
     flex-direction: row;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     justify-content: center;
     line-height: 25px;
     background-color: var(--header-background);
@@ -65,7 +65,7 @@ h1 {
 /*align name and picture*/
 }
 
-img {
+#self-portrait {
     position: absolute;
     top: 50px;
     width: 150px;
@@ -104,8 +104,8 @@ main {
 }
 
 article {
-    display: flex;
-    flex-wrap: wrap;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
     flex-direction: column;
     align-items: flex-start;
 }
@@ -124,7 +124,7 @@ p {
     height: 105px;
     width: 250px;
     margin-left: 5px;
-    display: flex;
+    /*display: flex;*/
     flex-direction: column;
 }
 
@@ -140,25 +140,31 @@ p {
 .sub-right {
     margin-top: 0px;
     padding: 0px 350px 0px;
-    display: flex;
-    flex-wrap: wrap;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
     flex-direction: row;
    justify-content: center;
 }
 
 .main-project {
-    display: flex;
-    flex-wrap: wrap;
+   /*display: flex;*/
+    /*flex-wrap: wrap;*/
     flex-direction: column;
     align-content: space-around;
     justify-content: space-between;
     align-items: center;
     background-color: var(--body-background);
     /*margin: 5px 75px 0px;*/
-    height: 150px;
+    height: 200px;
     width: 100%;
     border: solid var(--header-background);
     border-radius: 1.5rem;
+}
+
+#main-image {
+    height: auto;
+    width: 95px;
+    opacity: 75%;
 }
 
 /*main project pseudo class*/
@@ -180,17 +186,18 @@ p {
 
 .sub-project {
     background-color: var(--body-background);
-    height: 200px;
+    height: 310px;
     width: 280px;
     margin: 32px 16px 0px;
     padding: 0px 25px 0px;
     border: dashed var(--header-background);
     border-radius: 3.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: space-between;
-    justify-content: center;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /*sub project pseudo class*/
@@ -207,8 +214,8 @@ p {
 }
 
 footer {
-    display: flex;
-    flex-wrap: wrap;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
     justify-content: center;
     border-top: dashed var(--body-background);
     border-bottom: solid var(--border-focus);
@@ -230,18 +237,72 @@ footer {
 }*/
 
 /*media queries*/
+
+@media screen and (max-width: 600px) {
+    header {
+        /*position: relative;*/
+        display: flex;
+        /*flex-wrap: wrap;*/
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 165px;
+      
+    }
+}
+@media screen and (max-width: 340px) {
+    header {
+        height: 200px;
+      
+    }
+
+    h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*#font-large {
+        display: flex;
+        height: 50px;
+    }
+
+    #second-name {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 50px;
+        margin-right: 25px;
+    }*/
+
+    #self-portrait {
+        display: flex;
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 230px) {
+    header{
+        height: 250px
+    }
+
+    #self-portrait {
+        display: flex;
+        margin-top: 45px;
+    }
+}
+
 @media screen and (max-width: 1500px) {
     .sub-right {
-        display: flex;
-        flex-wrap: wrap;
+        /*display: flex;*/
+        /*flex-wrap: wrap;*/
         flex-direction: row;
     }
 }
 
 @media screen and (max-width: 1050px) {
     .sub-right {
-        display: flex;
-        flex-wrap: wrap;
+        /*display: flex;*/
+        /*flex-wrap: wrap;*/
         flex-direction: column;
     }
 }
