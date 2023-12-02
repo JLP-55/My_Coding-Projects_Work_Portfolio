@@ -27,6 +27,8 @@ header {
     justify-content: space-evenly;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 25px;
+    height: 125px;
+    border-bottom: dashed var(--body-background);
     background-color: var(--header-background);
     color: var(--colour-dark-blue);
 }
@@ -40,9 +42,16 @@ h1 {
     font-size: 1.7rem;
 }
 
+.font-large {
+    margin-top: -0.25rem;
+    margin-right: 0.35rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+}
+
 /*align name and picture*/
 .put-center {
-    height: 25px;
+    height: 35px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -51,18 +60,14 @@ h1 {
     line-height: 25px;
     background-color: var(--header-background);
     color: var(--colour-dark-blue);
+    border-top: solid var(--border-focus);
+    padding-top: 12px;
 /*align name and picture*/
-}
-
-.font-large {
-    margin-top: -0.1rem;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
 }
 
 img {
     position: absolute;
-    top: 28px;
+    top: 50px;
     width: 150px;
     /*display: flex;
     flex-wrap: wrap;*/
@@ -83,8 +88,8 @@ img {
 .header-right {
     margin: 0px;
     height: 75px;
-    /*width: 100%;*/
-    /*display: flex;
+    width: 350px;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-end;
@@ -93,8 +98,8 @@ img {
 /*main section*/
 main {
     margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
+    /*display: flex;
+    flex-wrap: wrap;*/
     
 }
 
@@ -123,29 +128,23 @@ p {
     flex-direction: column;
 }
 
-/*pseudo classes example
-.main-list:hover{
-    color: var(--header-background);
-}
-
-.main-list:focus {
-    outline: none;
-    border-color: var(--border-focus)
-}
-
-.main-list:active {
-    font-size: 88%;
-    box-shadow: 0 0 100px var(--border-focus) inset;
-}
-
 /*pseudo element examples*/
-li::before {
+#item:hover::before {
     font-family: Impact;
     content: '\273A';
-    color: #772014;
+    color: var(--header-background);
     margin-right: 5px;
-  }
-  /*pseudo element examples*/
+}
+
+/*aside section*/
+.sub-right {
+    margin-top: 0px;
+    padding: 0px 350px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+   justify-content: center;
+}
 
 .main-project {
     display: flex;
@@ -155,13 +154,14 @@ li::before {
     justify-content: space-between;
     align-items: center;
     background-color: var(--body-background);
-   /* margin: 5px 75px 0px; */
+    /*margin: 5px 75px 0px;*/
     height: 150px;
     width: 100%;
     border: solid var(--header-background);
     border-radius: 1.5rem;
 }
 
+/*main project pseudo class*/
 .main-project:active {
     outline: none;
     border-color: var(--border-focus);
@@ -173,14 +173,10 @@ li::before {
     color: var(--header-background);
 }
 
-.sub-right {
-    margin-top: 0px;
-    padding: 0px 350px 0px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-   justify-content: center;
-}
+/*.main-project:focus {
+    outline: none;
+    border-color: var(--colour-light-green)
+}*/
 
 .sub-project {
     background-color: var(--body-background);
@@ -197,6 +193,7 @@ li::before {
     justify-content: center;
 }
 
+/*sub project pseudo class*/
 .sub-project:active {
     outline: none;
     border-color: var(--border-focus);
@@ -211,85 +208,40 @@ li::before {
 
 footer {
     display: flex;
-    justify-content: space-around;
-    margin-top: 200px;
-}
-
-@media screen and (max-width: 495px) {
-    .header-left {
-        background-color: red;
-        display: flex;
-        flex-wrap: wrap;
-    }
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: dashed var(--body-background);
+    border-bottom: solid var(--border-focus);
+    border-radius: 0px;
+    margin-top: 35px;
+    font-size: 25px;
+    background-color: var(--header-background);
+    color: var(--colour-dark-blue);
+    /*height: 80x;*/
+    width: 100%;
 }
 /*
-@media screen and (max-width: 1520px) {
+@media screen and (max-width: 1500px) {
     .sub-project {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-}
-*/
-@media screen and (max-width: 1200px) {
+}*/
+
+/*media queries*/
+@media screen and (max-width: 1500px) {
     .sub-right {
-        background-color: var(--border-focus);
         display: flex;
-        flex-direction: column;
-    }
-
-    .main-project {
-        display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
 }
 
-/*
-
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial;
-    margin: 0;
-  }
-  
-  header {
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
-  }
-  
-  main {
-    display: flex;
-    margin-top: 2%;
-    flex-wrap: wrap;
-  }
-  
-  .main-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 60px;
-    background: #13293d;
-    color: #fff;
-  }
-  
-  .card {
-    flex: 1 0 0;
-    padding: 10px;
-    text-align: center;
-    border-style: solid;
-    border-width: 1px;
-  }
-  
-  .card header {
-    padding: 20px;
-    background: #13293d;
-    color: #fff;
-  }
-  
-  .card img {
-    width: 100%;
-    min-width: 400px;
-  }
-  */
+@media screen and (max-width: 1050px) {
+    .sub-right {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
