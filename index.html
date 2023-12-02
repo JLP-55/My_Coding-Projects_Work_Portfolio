@@ -10,16 +10,19 @@
 </head>
 
 <body>
-    <header>
+    <div class="put-center">
         <h1><span class="font-large">Jack</span>Leonard-Pekin <img src="./Assets/Images/placeholder-1.jpg" alt="temporary placeholder image"></h1>
+    </div>
+    <header>
         <section class="header-left">
             <nav>
                 <ul>
-                    <li><a href="https://www.google.com/">About Me</a></li>
-                    <li><a href="https://www.google.com/">Projects</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
                 </ul>
             </nav>
         </section>
+        
         <section class="header-right">
             <nav>
                 <ul>
@@ -33,7 +36,7 @@
     
     <main>
         <article>
-            <h2>About Me</h2>
+            <h2 id="about-me">About Me</h2>
             <p>
                 Currently just using placeholder text. This section will eventually have information about myself, such as:
                 <ul class="main-list">
@@ -44,31 +47,37 @@
                 </ul>
             </p>
         </article>
-
-        <article class="main-project">
+        <!--    
+        <section class="main-project">
             <h2>Main Project</h2>
             <p>Link to a major project I am working on.</p>
-        </article>
+        </section>
+        -->
     </main>
 
-    <aside class="sub-right">
+    <aside id="projects" class="sub-right">
+        <section class="main-project">
+            <h2>Main Project</h2>
+            <p>Link to a major project I am working on.</p>
+        </section>
+
         <section class="sub-project">
-            <h2>Minor Project</h2>
+            <h2>Minor Project 1</h2>
             <p>Link to a minor project I am working on.</p>
         </section>
 
         <section class="sub-project">
-            <h2>Minor Project</h2>
+            <h2>Minor Project 2</h2>
             <p>Link to a minor project I am working on.</p>
         </section>
 
         <section class="sub-project">
-            <h2>Minor Project</h2>
+            <h2>Minor Project 3</h2>
             <p>Link to a minor project I am working on.</p>
         </section>
 
         <section class="sub-project">
-            <h2>Minor Project</h2>
+            <h2>Minor Project 4</h2>
             <p>Link to a minor project I am working on.</p>
         </section>
     </aside>
@@ -78,3 +87,13 @@
     </footer>
 </body>
 </html>
+
+<!--items to fix so far:
+
+horizontal scroll
+header links
+media query for project boxes and header items
+add pictures to project boxes
+add filler text to "about me" section
+add flex grow/shrink for project boxes
+media query for project boxes doesn't want to stay centered-->
