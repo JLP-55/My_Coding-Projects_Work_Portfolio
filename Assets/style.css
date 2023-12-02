@@ -3,7 +3,8 @@
     --colour-dark-blue: #13293d;
     --colour-light-green: rgb(158, 255, 214);
     --border-focus: #772014;
-    --header-background: rgb(243, 243, 144);
+    --header-background: rgb(216, 162, 14);
+    --body-background: #33393f;
 }
 
 * {
@@ -11,14 +12,23 @@
     padding: 0px;
 }
 
+body {
+    background-color: var(--body-background);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--colour-text)
+}
+
 /*header section*/
 header {
-    position: relative;
+    /*position: relative;*/
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 25px;
     background-color: var(--header-background);
+    color: var(--colour-dark-blue);
 }
 
 /*name and picture code*/
@@ -28,6 +38,20 @@ h1 {
     justify-content: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.7rem;
+}
+
+/*align name and picture*/
+.put-center {
+    height: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 25px;
+    background-color: var(--header-background);
+    color: var(--colour-dark-blue);
+/*align name and picture*/
 }
 
 .font-large {
@@ -45,17 +69,26 @@ img {
 }
 
 /*header link code*/
-.header-left {
-    margin: 5px 45px 5px;
+/*.header-left {
+    margin-left: 5px;
+    height: 100px;
+    width: 95px;
+    border: solid var(--colour-dark-blue);
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: flex-start;
 }
 
 .header-right {
-    margin: -65px 45px 5px;
-    display: flex;
-    flex-direction: row-reverse;
-}
+    margin: 0px;
+    height: 75px;
+    /*width: 100%;*/
+    /*display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+}*/
 
 /*main section*/
 main {
@@ -73,23 +106,26 @@ article {
 }
 
 h2 {
-    border: solid var(--border-focus);
+    border-bottom: solid var(--header-background);
     border-radius: 8px;
+    margin-top: 4px
+}
+
+p {
+    margin-bottom: 8px;
 }
 
 .main-list {
     height: 105px;
     width: 250px;
-    margin-left: 20px;
+    margin-left: 5px;
     display: flex;
     flex-direction: column;
-    border: solid #000;
 }
 
-/*pseudo classes example*/
-.main-list:hover {
-    background-color: var(--colour-dark-blue);
-    color: var(--colour-text);
+/*pseudo classes example
+.main-list:hover{
+    color: var(--header-background);
 }
 
 .main-list:focus {
@@ -101,7 +137,6 @@ h2 {
     font-size: 88%;
     box-shadow: 0 0 100px var(--border-focus) inset;
 }
-/*pseudo classes example*/
 
 /*pseudo element examples*/
 li::before {
@@ -115,21 +150,31 @@ li::before {
 .main-project {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--colour-light-green);
+    background-color: var(--body-background);
    /* margin: 5px 75px 0px; */
     height: 150px;
     width: 100%;
-    border: solid 
+    border: solid var(--header-background);
+    border-radius: 1.5rem;
+}
+
+.main-project:active {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 0 100px var(--border-focus) inset;
 }
 
 .main-project:hover {
     background-color: var(--colour-dark-blue);
-    color: var(--colour-text);
+    color: var(--header-background);
 }
 
 .sub-right {
+    margin-top: 0px;
     padding: 0px 350px 0px;
     display: flex;
     flex-wrap: wrap;
@@ -138,20 +183,30 @@ li::before {
 }
 
 .sub-project {
-    background-color: var(--colour-light-green);
+    background-color: var(--body-background);
     height: 200px;
     width: 280px;
     margin: 32px 16px 0px;
     padding: 0px 25px 0px;
-    border: dashed;
+    border: dashed var(--header-background);
+    border-radius: 3.5rem;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: center;
+}
+
+.sub-project:active {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 0 100px var(--border-focus) inset;
 }
 
 .sub-project:hover {
     background-color: var(--colour-dark-blue);
     color: var(--colour-text);
+    color: var(--header-background)
 }
 
 footer {
@@ -167,7 +222,7 @@ footer {
         flex-wrap: wrap;
     }
 }
-
+/*
 @media screen and (max-width: 1520px) {
     .sub-project {
         display: flex;
@@ -175,12 +230,17 @@ footer {
         justify-content: space-between;
     }
 }
-
-@media screen and (max-width: 1636px) {
+*/
+@media screen and (max-width: 1200px) {
     .sub-right {
         background-color: var(--border-focus);
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+    }
+
+    .main-project {
+        display: flex;
+        flex-direction: column;
     }
 }
 
