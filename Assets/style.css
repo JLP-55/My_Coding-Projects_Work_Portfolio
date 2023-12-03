@@ -99,9 +99,8 @@ h1 {
 main {
     margin-top: 5px;
     padding: 0px 5px;
-    /*display: flex;
-    flex-wrap: wrap;*/
-    
+    display: flex;
+    flex-wrap: wrap;   
 }
 
 article {
@@ -117,6 +116,7 @@ h2 {
     margin-top: 2px
 }
 
+/*if you remove this selector then the paragraph text will flex. not sure why?*/
 #p-text {
     margin: 8px 0px;
     height: auto;
@@ -128,8 +128,6 @@ h2 {
     width: 250px;
     margin-left: 5px;
     padding-bottom: 0px;
-    /*display: flex;*/
-    flex-direction: column;
 }
 
 /*pseudo element examples*/
@@ -155,7 +153,7 @@ h2 {
     height: auto;
     width: 750px;
     margin-top: -600px;
-    padding: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px; 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -167,6 +165,9 @@ p {
 }
 
 .main-project {
+    height: 880px;
+    width: 100%;
+    margin-top: 0px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -174,16 +175,13 @@ p {
     justify-content: space-between;
     align-items: center;
     background-color: var(--body-background);
-    height: 880px;
-    width: 100%;
-    margin-top: 0px;
     border: solid var(--header-background);
     border-radius: 1.5rem;
 }
 
 #main-image {
     height: auto;
-    width:595px;
+    width: 595px;
     opacity: 75%;
 }
 
@@ -211,11 +209,11 @@ p {
 }*/
 
 .sub-project {
-    background-color: var(--body-background);
     height: 270px;
     width: 280px;
     margin: 32px 16px 0px;
     padding: 0px 25px 0px;
+    background-color: var(--body-background);
     border: dashed var(--header-background);
     border-radius: 3.5rem;
     display: flex;
@@ -264,6 +262,71 @@ footer {
 
 /*media queries*/
 
+@media screen and (max-width: 1450px) {
+    #p-text {
+        margin: 8px 0px;
+        height: auto;
+        width: auto;
+    }
+
+    #sub-right {
+        height: auto;
+        margin-top: 0px;
+        padding: 15px 25px 5px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    #sub-left {
+        height: auto;
+        width: 100%;
+        margin-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .main-project {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--body-background);
+        height: 280px;
+        width: 100%;
+        margin-top: 0px;
+        border: solid var(--header-background);
+        border-radius: 1.5rem;
+    }
+
+    #main-image {
+        height: auto;
+        width: 195px;
+        opacity: 75%;
+    }
+    
+    .sub-project {
+        background-color: var(--body-background);
+        height: 270px;
+        width: 280px;
+        margin: 32px 16px 0px;
+        padding: 0px 25px 0px;
+        border: dashed var(--header-background);
+        border-radius: 3.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
 @media screen and (max-width: 600px) {
     header {
         /*position: relative;*/
@@ -286,6 +349,11 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    #about-me {
+       position: relative;
+       left: 35%;
     }
 
     /*#font-large {
