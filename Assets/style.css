@@ -5,6 +5,7 @@
     --border-focus: #772014;
     --header-background: rgb(216, 162, 14);
     --body-background: #33393f;
+     /*--body-background: #3e5472;*/
     --active: red;
 }
 
@@ -26,8 +27,9 @@ header {
     /*flex-wrap: wrap;*/
     flex-direction: row;
     justify-content: space-around;
+    align-items: flex-start;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    line-height: 25px;
+    line-height: 45px;
     height: 125px;
     border-bottom: dashed var(--body-background);
     background-color: var(--header-background);
@@ -48,6 +50,11 @@ h1 {
     margin-right: 0.35rem;
     font-family: 'Courier New', Courier, monospace;
     font-size: 2.5rem;
+}
+
+.link-font {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.7rem;
 }
 
 /*align name and picture*/
@@ -361,15 +368,26 @@ footer {
     }
 }
 
+@media screen and (max-width: 860px) {
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: flex-start;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
 @media screen and (max-width: 600px) {
     header {
-        /*position: relative;*/
         display: flex;
-        /*flex-wrap: wrap;*/
+        flex-wrap: wrap;
         flex-direction: row;
+        align-content: flex-end;
         justify-content: space-around;
         align-items: flex-end;
-        height: 165px;
+        height: 205px;
       
     }
 
@@ -401,13 +419,13 @@ footer {
     }
 }
 
-@media screen and (max-width: 402px) {
+@media screen and (max-width: 397px) {
     footer {
         height: 120px;
     }
 }
 
-@media screen and (max-width: 353px) {
+@media screen and (max-width: 348px) {
     footer {
         height: 160px;
     }
@@ -415,7 +433,7 @@ footer {
 
 @media screen and (max-width: 340px) {
     header {
-        height: 200px;
+        height: 225px;
       
     }
 
@@ -448,24 +466,53 @@ footer {
     }
 }
 
+@media screen and (max-width: 310px) {
+    header {
+        height: 320px;
+      
+    }
+}
+
 @media screen and (max-width: 290px) {
     #main-image {
         height: auto;
-        width: 95px;
+        width: 105px;
+        opacity: 75%;
+    }
+
+    #main-image:hover {
+        height: auto;
+        width: 110px;
+        opacity: 75%;
+    }
+
+    #sub-image {
+        height: auto;
+        width: 105px;
+        opacity: 75%;
+    }
+
+    #sub-image:hover {
+        height: auto;
+        width: 110px;
         opacity: 75%;
     }
 }
 
-
-
 @media screen and (max-width: 230px) {
     header{
-        height: 250px
+        height: 340px
     }
 
     #self-portrait {
         display: flex;
         margin-top: 45px;
+    }
+}
+
+@media screen and (max-width: 180px) {
+    header {
+        height: 385px;
     }
 }
 /*
