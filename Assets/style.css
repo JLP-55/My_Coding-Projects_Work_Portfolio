@@ -5,6 +5,7 @@
     --border-focus: #772014;
     --header-background: rgb(216, 162, 14);
     --body-background: #33393f;
+    --active: red;
 }
 
 * {
@@ -139,6 +140,7 @@ h2 {
 }
 
 /*aside section*/
+/*align project boxes*/
 #sub-right {
     height: auto;
     margin-top: -300px;
@@ -164,6 +166,7 @@ p {
     margin: 8px 0px;
 }
 
+/*align items in main project box*/
 .main-project {
     height: 880px;
     width: 100%;
@@ -185,10 +188,15 @@ p {
     opacity: 75%;
 }
 
-#minor-image {
+#main-image:hover {
     height: auto;
-    width: 195px;
+    width: 620px;
     opacity: 75%;
+    box-shadow: 0 0 100px var(--border-focus);
+}
+
+#main-image:active {
+    box-shadow: 0 0 100px var(--active);
 }
 
 /*main project pseudo class*/
@@ -208,6 +216,7 @@ p {
     border-color: var(--colour-light-green)
 }*/
 
+/*aling items in sub project boxes*/
 .sub-project {
     height: 270px;
     width: 280px;
@@ -237,6 +246,23 @@ p {
     color: var(--header-background)
 }
 
+#sub-image {
+    height: auto;
+    width: 195px;
+    opacity: 75%;
+}
+
+#sub-image:hover {
+    height: auto;
+    width: 200px;
+    opacity: 75%;
+    box-shadow: 0 0 100px var(--border-focus);
+}
+
+#sub-image:active {
+    box-shadow: 0 0 100px var(--active);
+}
+
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -248,8 +274,10 @@ footer {
     font-size: 25px;
     background-color: var(--header-background);
     color: var(--colour-dark-blue);
-    /*height: 80x;*/
+    height: 85px;
     width: 100%;
+    font-size: 30px;
+    line-height: 38px;
 }
 /*
 @media screen and (max-width: 1500px) {
@@ -286,7 +314,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     .main-project {
@@ -297,7 +325,7 @@ footer {
         justify-content: space-between;
         align-items: center;
         background-color: var(--body-background);
-        height: 280px;
+        height: 470px;
         width: 100%;
         margin-top: 0px;
         border: solid var(--header-background);
@@ -306,9 +334,15 @@ footer {
 
     #main-image {
         height: auto;
-        width: 195px;
+        width: 395px;
         opacity: 75%;
     }
+
+    #main-image:hover {
+        height: auto;
+        width: 405px;
+        opacity: 75%;
+    } 
     
     .sub-project {
         background-color: var(--body-background);
@@ -338,7 +372,47 @@ footer {
         height: 165px;
       
     }
+
+    .main-project {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--body-background);
+        height: 350px;
+        width: 100%;
+        margin-top: 0px;
+        border: solid var(--header-background);
+        border-radius: 1.5rem;
+    }
+
+    #main-image {
+        height: auto;
+        width: 195px;
+        opacity: 75%;
+    }
+
+    #main-image:hover {
+        height: auto;
+        width: 200px;
+        opacity: 75%;
+    }
 }
+
+@media screen and (max-width: 402px) {
+    footer {
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 353px) {
+    footer {
+        height: 160px;
+    }
+}
+
 @media screen and (max-width: 340px) {
     header {
         height: 200px;
@@ -373,6 +447,16 @@ footer {
         margin-top: 25px;
     }
 }
+
+@media screen and (max-width: 290px) {
+    #main-image {
+        height: auto;
+        width: 95px;
+        opacity: 75%;
+    }
+}
+
+
 
 @media screen and (max-width: 230px) {
     header{
