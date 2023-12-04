@@ -22,9 +22,7 @@ body {
 
 /*header section*/
 header {
-    /*position: relative;*/
     display: flex;
-    /*flex-wrap: wrap;*/
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
@@ -37,9 +35,22 @@ header {
 }
 
 /*name and picture code*/
+/*align name and picture*/
+#put-center {
+    height: 35px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    line-height: 25px;
+    background-color: var(--header-background);
+    color: var(--colour-dark-blue);
+    border-top: solid var(--border-focus);
+    padding-top: 12px;
+/*align name and picture*/
+}
+
 h1 {
     display: flex;
-    /*flex-wrap: wrap;*/
     justify-content: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.7rem;
@@ -52,33 +63,15 @@ h1 {
     font-size: 2.5rem;
 }
 
-.link-font {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.7rem;
-}
-
-/*align name and picture*/
-.put-center {
-    height: 35px;
-    width: 100%;
-    /*display: flex;*/
-    flex-direction: row;
-    /*flex-wrap: wrap;*/
-    justify-content: center;
-    line-height: 25px;
-    background-color: var(--header-background);
-    color: var(--colour-dark-blue);
-    border-top: solid var(--border-focus);
-    padding-top: 12px;
-/*align name and picture*/
-}
-
 #self-portrait {
     position: absolute;
     top: 50px;
     width: 150px;
-    /*display: flex;
-    flex-wrap: wrap;*/
+}
+
+.link-font {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.7rem;
 }
 
 /*header link code*/
@@ -131,14 +124,14 @@ h2 {
     width: 650px;
 }
 
-.main-list {
+#main-list {
     height: auto;
     width: 250px;
     margin-left: 5px;
     padding-bottom: 0px;
 }
 
-/*pseudo element examples*/
+/*pseudo elements*/
 #item:hover::before {
     font-family: Impact;
     content: '\273A';
@@ -167,6 +160,7 @@ h2 {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    /*align project boxes*/
 }
 
 p {
@@ -189,6 +183,18 @@ p {
     border-radius: 1.5rem;
 }
 
+/*main project pseudo class*/
+.main-project:active {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 0 100px var(--border-focus) inset;
+}
+
+.main-project:hover {
+    background-color: var(--colour-dark-blue);
+    color: var(--header-background);
+}
+
 #main-image {
     height: auto;
     width: 595px;
@@ -205,23 +211,6 @@ p {
 #main-image:active {
     box-shadow: 0 0 100px var(--active);
 }
-
-/*main project pseudo class*/
-.main-project:active {
-    outline: none;
-    border-color: var(--border-focus);
-    box-shadow: 0 0 100px var(--border-focus) inset;
-}
-
-.main-project:hover {
-    background-color: var(--colour-dark-blue);
-    color: var(--header-background);
-}
-
-/*.main-project:focus {
-    outline: none;
-    border-color: var(--colour-light-green)
-}*/
 
 /*aling items in sub project boxes*/
 .sub-project {
@@ -286,17 +275,8 @@ footer {
     font-size: 30px;
     line-height: 38px;
 }
-/*
-@media screen and (max-width: 1500px) {
-    .sub-project {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-}*/
 
 /*media queries*/
-
 @media screen and (max-width: 1450px) {
     #p-text {
         margin: 8px 0px;
@@ -448,18 +428,6 @@ footer {
        left: 35%;
     }
 
-    /*#font-large {
-        display: flex;
-        height: 50px;
-    }
-
-    #second-name {
-        display: flex;
-        flex-direction: column-reverse;
-        height: 50px;
-        margin-right: 25px;
-    }*/
-
     #self-portrait {
         display: flex;
         margin-top: 25px;
@@ -515,19 +483,3 @@ footer {
         height: 385px;
     }
 }
-/*
-@media screen and (max-width: 1500px) {
-    .sub-right {
-        /*display: flex;*/
-        /*flex-wrap: wrap;*
-        flex-direction: row;
-    }
-}
-
-@media screen and (max-width: 1050px) {
-    .sub-right {
-        /*display: flex;*/
-        /*flex-wrap: wrap;*
-        flex-direction: column;
-    }
-}*/
