@@ -13,7 +13,7 @@ A preview of the webpage as it is rendered in the browser, with an "about me" se
 Link to the deployed application:
 https://jlp-55.github.io/My_Work_Portfolio/
 
-![Webpage preview](./Assets/Images/working_preview.PNG)
+![Webpage preview](./Assets/Images/working-preview.PNG)
 
 ## License
 
