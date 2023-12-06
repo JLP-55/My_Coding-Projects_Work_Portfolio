@@ -74,7 +74,7 @@ h1 {
     font-size: 1.7rem;
 }
 
-/*header link code*/
+/*header link code. not needed anymore but will keep to mess around with in the future?*/
 /*.header-left {
     margin-left: 5px;
     height: 100px;
@@ -117,7 +117,7 @@ h2 {
     margin-top: 2px
 }
 
-/*if you remove this selector then the paragraph text will flex. not sure why?*/
+/*if you remove this selector then the paragraph text @ < 1450px will flex. not sure why?*/
 #p-text {
     margin: 8px 0px;
     height: auto;
@@ -164,7 +164,7 @@ h2 {
 }
 
 p {
-    margin: 8px 0px;
+    margin: 8px 10px;
 }
 
 /*align items in main project box*/
@@ -197,7 +197,7 @@ p {
 
 #main-image {
     height: auto;
-    width: 595px;
+    width: 625px;
     opacity: 75%;
 }
 
